@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEDPM Group-B Exam Preparation Portal | Indian Railways</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22><text y=%2222%22 font-size=%2220%22>🚂</text></svg>">
+</head>
+<body data-theme="dark">
+
+  <div id="app-layout">
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <div>
+          <div class="sidebar-brand">
+            <span>🚂</span> AEDPM Master Prep
+          </div>
+          <span class="badge-cycle">CBT/TBT Cycle 2027–2028</span>
+        </div>
+      </div>
+
+      <!-- Section Navigation Tabs -->
+      <div class="nav-tabs">
+        <button class="nav-tab-btn active" data-section="all">All</button>
+        <button class="nav-tab-btn" data-section="Establishment Rules">Estt</button>
+        <button class="nav-tab-btn" data-section="Financial Rules">Finance</button>
+      </div>
+
+      <!-- Live Search -->
+      <div class="sidebar-search-box">
+        <input type="text" id="sidebar-search" class="search-input" placeholder="🔍 Search syllabus &amp; rules...">
+      </div>
+
+      <!-- Topic List Scrollable -->
+      <div class="sidebar-content" id="sidebar-content">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main id="main-view">
+      <!-- Top Application Header Bar -->
+      <header class="top-bar">
+        <div class="view-modes">
+          <button class="view-btn active" data-view="notes">
+            <span>📖</span> Study Notes
+          </button>
+          <button class="view-btn" data-view="mindmaps">
+            <span>🗺️</span> Mind Maps &amp; Flows
+          </button>
+          <button class="view-btn" data-view="practice">
+            <span>✍️</span> Practice MCQs
+          </button>
+          <button class="view-btn" data-view="exam">
+            <span>⏱️</span> CBT Simulator
+          </button>
+          <button class="view-btn" data-view="matrix">
+            <span>⚡</span> Deprecated vs Modern
+          </button>
+          <button class="view-btn" data-view="flashcards">
+            <span>📇</span> Flashcards
+          </button>
+        </div>
+
+        <div class="top-actions">
+          <span id="stats-badge" style="font-size:0.8rem; font-weight:700; color:var(--accent); background:var(--bg-tertiary); padding:0.35rem 0.75rem; border-radius:20px;">
+            1515 MCQs | 47 Topics
+          </span>
+          <button class="btn-icon" id="theme-toggle" title="Toggle Dark/Light Mode">
+            🌓
+          </button>
+        </div>
+      </header>
+
+      <!-- Dynamic Content Body -->
+      <div class="content-body" id="main-content-body">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Data Scripts (Loaded Locally, Offline Ready) -->
+  <script src="data/topics_data.js"></script>
+  <script src="data/questions_data.js"></script>
+  <script src="js/mindmaps.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
