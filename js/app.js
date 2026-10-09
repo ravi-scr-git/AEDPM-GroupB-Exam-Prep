@@ -143,7 +143,6 @@
         html += `
           <div class="topic-nav-item ${isActive}" data-id="${t.id}">
             <span>${isDone}${t.title}</span>
-            <span class="topic-badge">${t.page}</span>
           </div>
         `;
       });
@@ -208,7 +207,6 @@
     let html = `
       <div class="topic-header-card">
         <div class="topic-meta">
-          <span class="tag-page">${topic.page}</span>
           <span class="tag-section">${topic.section}</span>
           ${topic.module ? `<span class="tag-section">${topic.module}</span>` : ''}
         </div>
@@ -224,6 +222,121 @@
           </button>
         </div>
       </div>
+
+      <!-- Statutory Paras and Rules -->
+      ${topic.statutory_paras_and_rules && topic.statutory_paras_and_rules.length > 0 ? `
+        <div style="background: rgba(56, 189, 248, 0.08); border-left: 4px solid var(--accent); padding: 1.25rem; border-radius: 6px; margin-bottom: 1.25rem;">
+          <div style="font-weight: 700; color: var(--accent); font-size: 0.95rem; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>📜</span> ORIGINAL MANUAL PARAS &amp; STATUTORY CODES
+          </div>
+          <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-primary); line-height: 1.6;">
+            ${topic.statutory_paras_and_rules.map(p => `<li><strong>${p}</strong></li>`).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
+      <!-- Historical Roots, Pioneers & Evolution -->
+      ${topic.roots_and_evolution ? `
+        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); margin-bottom: 1.25rem;">
+          <div style="font-weight: 700; color: #f59e0b; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>🏛️</span> HISTORICAL ROOTS, PIONEERS &amp; EVOLUTION
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; font-size: 0.88rem; margin-bottom: 0.75rem;">
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 6px;">
+              <span style="color: var(--text-muted); display: block; font-size: 0.75rem; text-transform: uppercase;">Origin / Founding Year</span>
+              <strong style="color: var(--text-primary);">${topic.roots_and_evolution.origin_year || 'N/A'}</strong>
+            </div>
+            <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 6px;">
+              <span style="color: var(--text-muted); display: block; font-size: 0.75rem; text-transform: uppercase;">Key Pioneers &amp; Architects</span>
+              <strong style="color: var(--text-primary);">${topic.roots_and_evolution.key_persons || 'N/A'}</strong>
+            </div>
+            ${topic.roots_and_evolution.statistics ? `
+              <div style="background: var(--bg-tertiary); padding: 0.75rem; border-radius: 6px; grid-column: 1 / -1;">
+                <span style="color: var(--text-muted); display: block; font-size: 0.75rem; text-transform: uppercase;">Scale &amp; Benchmark Statistics</span>
+                <span style="color: var(--text-primary);">${topic.roots_and_evolution.statistics}</span>
+              </div>
+            ` : ''}
+          </div>
+          ${topic.roots_and_evolution.milestones && topic.roots_and_evolution.milestones.length > 0 ? `
+            <div style="margin-top: 0.5rem;">
+              <span style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Chronological Milestones:</span>
+              <ul style="margin: 0.4rem 0 0 1.25rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                ${topic.roots_and_evolution.milestones.map(m => `<li>${m}</li>`).join('')}
+              </ul>
+            </div>
+          ` : ''}
+        </div>
+      ` : ''}
+
+      <!-- Language Tutorials & Reference Portals -->
+      ${topic.language_tutorials_and_references && topic.language_tutorials_and_references.length > 0 ? `
+        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); margin-bottom: 1.25rem;">
+          <div style="font-weight: 700; color: #10b981; font-size: 0.95rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>💻</span> AUTHORITATIVE LANGUAGE TUTORIALS &amp; OFFICIAL DOCUMENTATION
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem;">
+            ${topic.language_tutorials_and_references.map(lt => `
+              <div style="background: var(--bg-tertiary); padding: 0.85rem; border-radius: 6px; border-left: 3px solid #10b981;">
+                <strong style="color: var(--text-primary); font-size: 0.95rem;">${lt.language || lt.technology}</strong>
+                <div style="font-size: 0.78rem; color: var(--text-muted); margin: 0.2rem 0;">Standard: ${lt.standard}</div>
+                <div style="margin-top: 0.4rem; font-size: 0.82rem;">
+                  <a href="${lt.official_docs}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600;">📖 Official Docs ↗</a>
+                </div>
+                ${lt.recommended_tutorials && lt.recommended_tutorials.length > 0 ? `
+                  <div style="margin-top: 0.4rem; font-size: 0.8rem; color: var(--text-secondary);">
+                    <strong>Tutorials:</strong><br>
+                    ${lt.recommended_tutorials.map(tut => `<div>• ${tut.replace(/https?:\/\/[^\s]+/g, url => `<a href="${url}" target="_blank" rel="noopener" style="color:var(--accent);">${url}</a>`)}</div>`).join('')}
+                  </div>
+                ` : ''}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Syllabus External Links Comprehensive Audit -->
+      ${topic.syllabus_links_audit && topic.syllabus_links_audit.length > 0 ? `
+        <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 1.25rem; border-radius: var(--radius); margin-bottom: 1.25rem;">
+          <div style="font-weight: 700; color: #a855f7; font-size: 0.95rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>🔍</span> SYLLABUS EXTERNAL LINKS EVALUATION &amp; MIGRATION AUDIT
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+            Evaluation of links from pages 7–10 of the official Railway Board syllabus document. Deprecated, acquired, and defunct references have been audited and updated to current authoritative standards.
+          </p>
+          <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.84rem;">
+              <thead>
+                <tr style="background: var(--bg-tertiary); color: var(--text-primary); text-align: left;">
+                  <th style="padding: 0.6rem; border: 1px solid var(--border);">Syllabus Topic</th>
+                  <th style="padding: 0.6rem; border: 1px solid var(--border);">Link in Syllabus</th>
+                  <th style="padding: 0.6rem; border: 1px solid var(--border);">Status</th>
+                  <th style="padding: 0.6rem; border: 1px solid var(--border);">Audit Analysis &amp; Extraction</th>
+                  <th style="padding: 0.6rem; border: 1px solid var(--border);">Current Authoritative Resource</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${topic.syllabus_links_audit.map(item => `
+                  <tr>
+                    <td style="padding: 0.6rem; border: 1px solid var(--border); font-weight: 600;">${item.syllabus_topic}</td>
+                    <td style="padding: 0.6rem; border: 1px solid var(--border); font-family: var(--mono); font-size: 0.78rem; color: var(--text-muted);">${item.syllabus_url}</td>
+                    <td style="padding: 0.6rem; border: 1px solid var(--border);">
+                      <span style="display: inline-block; padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; font-weight: 700; background: ${
+                        item.status.includes('DEFUNCT') || item.status.includes('SHUT DOWN') ? 'rgba(239, 68, 68, 0.2); color: #ef4444;' :
+                        item.status.includes('Acquired') || item.status.includes('Retired') ? 'rgba(245, 158, 11, 0.2); color: #f59e0b;' :
+                        'rgba(16, 185, 129, 0.2); color: #10b981;'
+                      }">${item.status}</span>
+                    </td>
+                    <td style="padding: 0.6rem; border: 1px solid var(--border); color: var(--text-secondary);">${item.audit_analysis}</td>
+                    <td style="padding: 0.6rem; border: 1px solid var(--border);">
+                      <a href="${item.modern_replacement_url}" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: underline; font-weight: 600;">Open Active Portal ↗</a>
+                    </td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ` : ''}
 
       <!-- Deprecated vs Modern Callout -->
       ${topic.deprecated_vs_modern ? `
@@ -882,29 +995,65 @@
     });
   }
 
-  // --- SIMPLE MARKDOWN FORMATTER HELPER ---
+  // --- ADVANCED MARKDOWN FORMATTER HELPER ---
   function formatMarkdown(md) {
     if (!md) return '';
     let res = md;
     
     // Code blocks
-    res = res.replace(/```([a-z]*)\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>');
+    res = res.replace(/```([a-z]*)\n([\s\S]*?)```/g, '<pre><code class="language-$1">$2</code></pre>');
     // Inline code
-    res = res.replace(/`([^`]+)`/g, '<code style="background:#090d16;padding:0.15rem 0.4rem;border-radius:4px;color:#38bdf8;font-family:var(--mono);">$1</code>');
+    res = res.replace(/`([^`]+)`/g, '<code style="background:var(--bg-tertiary);padding:0.15rem 0.4rem;border-radius:4px;color:var(--accent);font-family:var(--mono);font-size:0.88em;">$1</code>');
     // Headers
-    res = res.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-    res = res.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-    res = res.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+    res = res.replace(/^#### (.*$)/gim, '<h4 style="color:var(--text-primary);margin:1.2rem 0 0.5rem;font-size:1rem;">$1</h4>');
+    res = res.replace(/^### (.*$)/gim, '<h3 style="color:var(--accent);margin:1.5rem 0 0.6rem;font-size:1.15rem;border-bottom:1px solid var(--border);padding-bottom:0.3rem;">$1</h3>');
+    res = res.replace(/^## (.*$)/gim, '<h2 style="color:var(--accent);margin:1.8rem 0 0.8rem;font-size:1.35rem;">$1</h2>');
+    res = res.replace(/^# (.*$)/gim, '<h1 style="color:var(--accent);margin:2rem 0 1rem;font-size:1.5rem;">$1</h1>');
     // Bold
     res = res.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    // Links [text](url)
+    res = res.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:underline;">$1 ↗</a>');
     // Lists
     res = res.replace(/^\s*-\s+(.*$)/gim, '<li>$1</li>');
-    // Tables
-    res = res.replace(/\|(.+)\|/g, function (match) {
-      const cells = match.split('|').filter(c => c.trim().length > 0);
-      if (cells.some(c => c.includes('---'))) return '';
-      return '<tr>' + cells.map(c => `<td>${c.trim()}</td>`).join('') + '</tr>';
-    });
+    
+    // Robust Table Processing
+    const lines = res.split('\n');
+    let inTable = false;
+    let tableBuffer = [];
+    let newLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line.startsWith('|') && line.endsWith('|')) {
+        if (line.includes('---')) {
+          continue;
+        }
+        if (!inTable) {
+          inTable = true;
+          tableBuffer = [];
+        }
+        const cells = line.split('|').slice(1, -1);
+        const isHeader = tableBuffer.length === 0;
+        const tag = isHeader ? 'th' : 'td';
+        const cellStyle = isHeader 
+          ? 'padding:0.6rem 0.8rem;border:1px solid var(--border);background:var(--bg-tertiary);color:var(--text-primary);font-weight:700;text-align:left;'
+          : 'padding:0.6rem 0.8rem;border:1px solid var(--border);text-align:left;';
+        const rowHtml = '<tr>' + cells.map(c => `<${tag} style="${cellStyle}">${c.trim()}</${tag}>`).join('') + '</tr>';
+        tableBuffer.push(rowHtml);
+      } else {
+        if (inTable) {
+          newLines.push('<div style="overflow-x:auto;margin:1.2rem 0;"><table style="width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;font-size:0.88rem;">' + tableBuffer.join('') + '</table></div>');
+          inTable = false;
+          tableBuffer = [];
+        }
+        newLines.push(lines[i]);
+      }
+    }
+    if (inTable) {
+      newLines.push('<div style="overflow-x:auto;margin:1.2rem 0;"><table style="width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;font-size:0.88rem;">' + tableBuffer.join('') + '</table></div>');
+    }
+    
+    res = newLines.join('\n');
     // Paragraph breaks
     res = res.replace(/\n\n/g, '<br><br>');
     return res;

@@ -25144,5 +25144,395 @@ window.AEDPM_QUESTIONS = [
     "answer": 0,
     "explanation": "Prepared statements with parameterized queries ensure user input is treated strictly as data, neutralizing SQL injection.",
     "is_deprecated": false
+  },
+  {
+    "id": "tech_q_cad_1",
+    "topic_id": "tech_10",
+    "question": "Which CNC preparatory G-code is utilized to program linear interpolation cutting motion at a controlled feed rate?",
+    "options": [
+      "A) G00",
+      "B) G01",
+      "C) G02",
+      "D) G03"
+    ],
+    "answer": "B",
+    "explanation": "G01 commands linear interpolation cutting motion along programmed axes at the specified feed rate (F). G00 is rapid non-cutting traverse, while G02 and G03 command clockwise and counter-clockwise circular interpolation respectively."
+  },
+  {
+    "id": "tech_q_cad_2",
+    "topic_id": "tech_10",
+    "question": "What is the primary difference between Constructive Solid Geometry (CSG) and Boundary Representation (B-Rep) in 3D CAD solid modeling?",
+    "options": [
+      "A) CSG uses explicit polygonal meshes while B-Rep uses wireframes",
+      "B) CSG combines primitive solids using boolean operations (Union, Intersection, Difference), whereas B-Rep defines a solid by its bounding faces, edges, and vertices",
+      "C) CSG is strictly 2D while B-Rep is 3D",
+      "D) B-Rep cannot represent curved surfaces while CSG can"
+    ],
+    "answer": "B",
+    "explanation": "CSG models a 3D solid as a binary tree of boolean combinations (Union, Difference, Intersection) of geometric primitives (cubes, cylinders, spheres). B-Rep explicitly defines the boundary surfaces, bounding edges, and connecting vertices of the enclosed solid volume."
+  },
+  {
+    "id": "tech_q_cad_3",
+    "topic_id": "tech_10",
+    "question": "Which CNC miscellaneous M-code is programmed to command clockwise (CW) spindle rotation?",
+    "options": [
+      "A) M02",
+      "B) M03",
+      "C) M04",
+      "D) M05"
+    ],
+    "answer": "B",
+    "explanation": "M03 commands the spindle to rotate in a clockwise direction. M04 commands counter-clockwise spindle rotation, and M05 commands spindle stop."
+  },
+  {
+    "id": "tech_q_cad_4",
+    "topic_id": "tech_10",
+    "question": "Which international standard governs the neutral data exchange of complete 3D product model information across heterogeneous CAD systems (STEP)?",
+    "options": [
+      "A) ISO 9001",
+      "B) ISO 10303",
+      "C) ISO 6983",
+      "D) ISO 27001"
+    ],
+    "answer": "B",
+    "explanation": "ISO 10303 is the official international standard for the computer-interpretable representation and exchange of product manufacturing information, universally known as STEP (Standard for the Exchange of Product Model Data)."
+  },
+  {
+    "id": "tech_q_cad_5",
+    "topic_id": "tech_10",
+    "question": "In Finite Element Analysis (FEA) of railway rolling stock bogies and coach shells, which failure criterion is most commonly used to predict ductile yielding under multi-axial stress?",
+    "options": [
+      "A) Rankine maximum principal stress theory",
+      "B) Von Mises distortion energy theory",
+      "C) Coulomb-Mohr brittle fracture theory",
+      "D) Saint-Venant maximum strain theory"
+    ],
+    "answer": "B",
+    "explanation": "The Von Mises yield criterion (distortion energy theory) is universally employed in FEA structural analysis of steel and aluminum rail coach components to evaluate multi-axial yielding and fatigue safety margins."
+  },
+  {
+    "id": "tech_q_cad_6",
+    "topic_id": "tech_10",
+    "question": "Who is universally recognized as the pioneer of interactive computer graphics and CAD following his development of the Sketchpad system at MIT Lincoln Laboratory in 1963?",
+    "options": [
+      "A) Alan Turing",
+      "B) Ivan Sutherland",
+      "C) Patrick Hanratty",
+      "D) Pierre B\u00e9zier"
+    ],
+    "answer": "B",
+    "explanation": "Dr. Ivan Sutherland created Sketchpad in 1963 at MIT, introducing interactive graphical drafting with a light pen, object constraints, and coordinate snapping, earning him the Turing Award in 1988."
+  },
+  {
+    "id": "tech_q_cad_7",
+    "topic_id": "tech_10",
+    "question": "In CNC programming, what is the functional difference between G90 and G91 modal commands?",
+    "options": [
+      "A) G90 is metric mode and G91 is inch mode",
+      "B) G90 designates absolute dimensioning from workpiece zero, while G91 designates incremental dimensioning from current tool position",
+      "C) G90 designates spindle speed in RPM and G91 designates constant surface speed",
+      "D) G90 is canned drilling cycle and G91 is thread cutting"
+    ],
+    "answer": "B",
+    "explanation": "G90 sets absolute programming mode where all coordinates are referenced from the fixed workpiece origin (WCS zero). G91 sets incremental programming mode where dimensions represent vector distances from the tool's instantaneous position."
+  },
+  {
+    "id": "tech_q_cad_8",
+    "topic_id": "tech_10",
+    "question": "Which Indian Railways Production Unit pioneered the design and indigenous manufacturing of the Vande Bharat (Train 18) semi-high speed trainsets?",
+    "options": [
+      "A) Chittaranjan Locomotive Works (CLW), Chittaranjan",
+      "B) Integral Coach Factory (ICF), Chennai",
+      "C) Rail Coach Factory (RCF), Kapurthala",
+      "D) Modern Coach Factory (MCF), Raebareli"
+    ],
+    "answer": "B",
+    "explanation": "The Integral Coach Factory (ICF), Chennai designed, prototyped, and manufactured the first indigenous Vande Bharat semi-high speed trainsets (Train 18) utilizing advanced 3D CAD modeling and automated fabrication cells."
+  },
+  {
+    "id": "tech_q_cad_9",
+    "topic_id": "tech_10",
+    "question": "In computer graphics, which rasterization algorithm calculates pixel coordinates along a straight line using only fast integer addition and subtraction, avoiding floating-point multiplication?",
+    "options": [
+      "A) Digital Differential Analyzer (DDA)",
+      "B) Bresenham's Line Algorithm",
+      "C) Cohen-Sutherland Algorithm",
+      "D) Liang-Barsky Algorithm"
+    ],
+    "answer": "B",
+    "explanation": "Jack E. Bresenham developed Bresenham's line algorithm in 1962 at IBM. It utilizes incremental integer error evaluation ($2\\Delta y - \\Delta x$) to determine pixel selection, making it exceptionally fast in graphics rasterization hardware."
+  },
+  {
+    "id": "tech_q_cad_10",
+    "topic_id": "tech_10",
+    "question": "What is the primary function of G02 and G03 codes in CNC part programs?",
+    "options": [
+      "A) Spindle ON and Spindle STOP",
+      "B) Circular interpolation Clockwise (G02) and Counter-Clockwise (G03)",
+      "C) Coolant ON and Coolant OFF",
+      "D) Rapid positioning and linear cutting feed"
+    ],
+    "answer": "B",
+    "explanation": "G02 commands circular interpolation in the clockwise direction, while G03 commands circular interpolation in the counter-clockwise direction along the programmed arc radius (R) or arc center offset vectors (I, J, K)."
+  },
+  {
+    "id": "tech_q_cad_11",
+    "topic_id": "tech_10",
+    "question": "Which mathematical curve representation is widely used in CAD for automotive and railway rolling stock aerodynamic styling due to its intuitive control polygon and affine invariance?",
+    "options": [
+      "A) Circle arc",
+      "B) B\u00e9zier Curve / NURBS (Non-Uniform Rational B-Splines)",
+      "C) Parabolic arc",
+      "D) Involute curve"
+    ],
+    "answer": "B",
+    "explanation": "B\u00e9zier curves and NURBS enable precise mathematical formulation of free-form aerodynamic curves and surfaces using weighted control points, formulated by Pierre B\u00e9zier and Paul de Casteljau."
+  },
+  {
+    "id": "tech_q_cad_12",
+    "topic_id": "tech_10",
+    "question": "What does CNC code M30 signify when placed at the termination of a part program?",
+    "options": [
+      "A) Tool change execution",
+      "B) Program End and Rewind back to start",
+      "C) Spindle speed override",
+      "D) Emergency machine stop"
+    ],
+    "answer": "B",
+    "explanation": "M30 designates Program End and Reset/Rewind, signaling the CNC controller that machining is complete, turning off coolant and spindle, and resetting program execution to the beginning block."
+  },
+  {
+    "id": "tech_q_cad_13",
+    "topic_id": "tech_10",
+    "question": "In CAD transformation matrices, what homogeneous matrix operation is used to scale a 2D object by factor $S_x$ and $S_y$?",
+    "options": [
+      "A) Matrix addition of translation vectors",
+      "B) Diagonal matrix multiplication with elements [Sx, 0, 0; 0, Sy, 0; 0, 0, 1]",
+      "C) Orthogonal projection matrix",
+      "D) Transpose of rotation matrix"
+    ],
+    "answer": "B",
+    "explanation": "In 2D homogeneous coordinates, scaling is represented by multiplying the coordinate vector $[x, y, 1]^T$ by a $3\\times 3$ diagonal scaling matrix having diagonal elements $S_x, S_y, 1$."
+  },
+  {
+    "id": "tech_q_cad_14",
+    "topic_id": "tech_10",
+    "question": "Which clipping algorithm is widely used in 2D computer graphics to clip line segments against a rectangular viewing window using 4-bit outcodes (Top, Bottom, Right, Left)?",
+    "options": [
+      "A) Sutherland-Hodgman Algorithm",
+      "B) Cohen-Sutherland Line Clipping Algorithm",
+      "C) Warnock Algorithm",
+      "D) Painter's Algorithm"
+    ],
+    "answer": "B",
+    "explanation": "The Cohen-Sutherland algorithm divides 2D space into 9 regions using 4-bit outcodes (TBRL). Lines with endpoint bitwise OR equal to 0000 are trivially accepted, while those with non-zero bitwise AND are trivially rejected."
+  },
+  {
+    "id": "tech_q_cad_15",
+    "topic_id": "tech_10",
+    "question": "Which Indian Railways Production Unit located in Varanasi manufactures heavy electric locomotives (WAP-7, WAG-9HC) having completely converted its production from diesel to 100% electric?",
+    "options": [
+      "A) Chittaranjan Locomotive Works (CLW)",
+      "B) Banaras Locomotive Works (BLW)",
+      "C) Patiala Locomotive Works (PLW)",
+      "D) Rail Wheel Factory (RWF)"
+    ],
+    "answer": "B",
+    "explanation": "Banaras Locomotive Works (BLW, formerly DLW) successfully transitioned from manufacturing diesel locomotives to state-of-the-art electric locomotives, utilizing modern CAD/CAM manufacturing lines."
+  },
+  {
+    "id": "tech_q_dc_1",
+    "topic_id": "tech_12",
+    "question": "According to Uptime Institute Tier standards, what is the minimum availability and maximum annual unplanned downtime permitted for a Tier III Concurrently Maintainable Data Centre?",
+    "options": [
+      "A) 99.671% availability / 28.8 hours downtime",
+      "B) 99.741% availability / 22.0 hours downtime",
+      "C) 99.982% availability / 1.6 hours downtime",
+      "D) 99.995% availability / 0.4 hours downtime"
+    ],
+    "answer": "C",
+    "explanation": "Uptime Institute Tier III mandates 99.982% availability, limiting annual downtime to at most 1.6 hours. Its defining feature is concurrent maintainability\u2014any capacity component or distribution path can be removed for maintenance without impacting active IT operations."
+  },
+  {
+    "id": "tech_q_dc_2",
+    "topic_id": "tech_12",
+    "question": "What is the standard formula for Power Usage Effectiveness (PUE) in enterprise data centre energy efficiency audits?",
+    "options": [
+      "A) PUE = IT Equipment Power / Total Facility Power",
+      "B) PUE = Total Facility Power / IT Equipment Power",
+      "C) PUE = Cooling Power / IT Equipment Power",
+      "D) PUE = (Total Facility Power - IT Equipment Power) / Total Facility Power"
+    ],
+    "answer": "B",
+    "explanation": "PUE is defined as Total Facility Power divided by IT Equipment Power. An ideal PUE is 1.0, indicating that 100% of incoming energy is consumed directly by IT equipment rather than auxiliary cooling, lighting, and power distribution losses."
+  },
+  {
+    "id": "tech_q_dc_3",
+    "topic_id": "tech_12",
+    "question": "Which international telecommunications and infrastructure standard defines comprehensive architectural, electrical, mechanical, and structural criteria for data centers?",
+    "options": [
+      "A) IEEE 802.3",
+      "B) ANSI/TIA-942",
+      "C) ISO 9001",
+      "D) RFC 1918"
+    ],
+    "answer": "B",
+    "explanation": "ANSI/TIA-942 (Telecommunications Infrastructure Standard for Data Centers) specifies the physical layout, cabling hierarchy, electrical dual-feed designs, and environmental controls for enterprise data centres."
+  },
+  {
+    "id": "tech_q_dc_4",
+    "topic_id": "tech_12",
+    "question": "Why is Cold Aisle Containment (CAC) preferred over uncontained layouts in modern high-density railway server rooms?",
+    "options": [
+      "A) It eliminates the need for any air conditioning compressors",
+      "B) It physically isolates cold supply air from hot exhaust air, preventing thermal mixing and reducing PAC chiller energy consumption",
+      "C) It allows servers to operate at over 60\u00b0C intake temperature",
+      "D) It eliminates the need for raised flooring"
+    ],
+    "answer": "B",
+    "explanation": "Cold Aisle Containment encloses the cold aisle with roof panels and end doors. This prevents cold air from mixing with hot exhaust air escaping from the rear of the racks, delivering uniform 18\u00b0C\u201322\u00b0C air to server intakes and improving chiller efficiency by 20% to 30%."
+  },
+  {
+    "id": "tech_q_dc_5",
+    "topic_id": "tech_12",
+    "question": "Which gaseous clean agent fire suppression system is universally preferred in mission-critical data centres due to zero ozone depletion potential, zero atmospheric lifetime, and safe human exposure levels?",
+    "options": [
+      "A) Halon 1301",
+      "B) Carbon dioxide (CO2) high pressure",
+      "C) Novec 1230 (FK-5-1-12) / FM-200 (HFC-227ea)",
+      "D) Dry chemical monoammonium phosphate powder"
+    ],
+    "answer": "C",
+    "explanation": "Novec 1230 and FM-200 are clean gaseous agents that extinguish fire by heat absorption without leaving chemical residues or damaging sensitive electronic circuitry, unlike water or dry chemical powders."
+  },
+  {
+    "id": "tech_q_dc_6",
+    "topic_id": "tech_12",
+    "question": "Where is the primary Central Data Centre of CRIS (Centre for Railway Information Systems) located, and where is its primary Disaster Recovery Centre (DRC) hosted?",
+    "options": [
+      "A) Mumbai Central (DC) and Chennai Central (DRC)",
+      "B) Chanakyapuri, New Delhi (DC) and Secunderabad / Kolkata (DRC)",
+      "C) Rail Bhavan, New Delhi (DC) and Pune (DRC)",
+      "D) Lucknow RDSO (DC) and Bangalore (DRC)"
+    ],
+    "answer": "B",
+    "explanation": "CRIS operates its state-of-the-art Central Data Centre at Chanakyapuri, New Delhi, paired with geographically isolated Disaster Recovery Centres at Secunderabad and Kolkata, interconnected via dedicated high-speed optical fiber links."
+  },
+  {
+    "id": "tech_q_dc_7",
+    "topic_id": "tech_12",
+    "question": "In Business Continuity and Disaster Recovery planning, what does the metric Recovery Point Objective (RPO) measure?",
+    "options": [
+      "A) The duration of time taken to rebuild physical hardware from scratch",
+      "B) The maximum acceptable age of files or data that must be recovered from backup storage for normal operations to resume (acceptable data loss)",
+      "C) The total network bandwidth available between DC and DRC",
+      "D) The fuel storage duration of backup diesel generators"
+    ],
+    "answer": "B",
+    "explanation": "Recovery Point Objective (RPO) represents the maximum tolerable duration of data loss measured in time prior to the disruption event. For core transactional railway systems like PRS and IPAS, target RPO is zero or near-zero."
+  },
+  {
+    "id": "tech_q_dc_8",
+    "topic_id": "tech_12",
+    "question": "What is the defining capability of a Tier IV Fault-Tolerant data centre under the Uptime Institute standard?",
+    "options": [
+      "A) It operates without any diesel generator backup",
+      "B) It has 2(N+1) redundant independent active power and cooling distribution paths and can withstand any single unplanned infrastructure failure without IT outage",
+      "C) It allows up to 24 hours of unplanned downtime annually",
+      "D) It only uses public cloud providers"
+    ],
+    "answer": "B",
+    "explanation": "Tier IV is the highest tier ($2(N+1)$ redundancy). It provides multiple active power and cooling paths, physical compartmentalization, and automated fault detection, tolerating any single unplanned component or path failure with zero disruption to IT processing (99.995% availability, max 24 mins downtime/year)."
+  },
+  {
+    "id": "tech_q_dc_9",
+    "topic_id": "tech_12",
+    "question": "What does the 3-2-1 enterprise backup rule prescribe for railway IT operations?",
+    "options": [
+      "A) 3 administrators, 2 passwords, 1 master key",
+      "B) 3 copies of data, across 2 different storage media types, with at least 1 copy preserved offsite or in the cloud",
+      "C) 3 hours backup window, 2 tape drives, 1 operator",
+      "D) 3 daily backups, 2 weekly backups, 1 monthly backup"
+    ],
+    "answer": "B",
+    "explanation": "The 3-2-1 backup rule mandates: Keep at least 3 copies of data (1 primary production + 2 backups), store backups on 2 different media types (e.g., NVMe SAN disk array + LTO magnetic tape), and keep at least 1 copy offsite (e.g., Disaster Recovery site)."
+  },
+  {
+    "id": "tech_q_dc_10",
+    "topic_id": "tech_12",
+    "question": "What is the primary role of an Online Double Conversion Uninterruptible Power Supply (UPS) in a data centre?",
+    "options": [
+      "A) Only charges batteries during weekend power shutdowns",
+      "B) Continuously rectifies raw utility AC power to DC, and then inverts DC back to pristine regulated AC power, providing zero transfer time during mains failure",
+      "C) Converts single phase 230V power to three phase 415V without batteries",
+      "D) Acts solely as a passive surge protection suppressor"
+    ],
+    "answer": "B",
+    "explanation": "An Online Double Conversion UPS operates in continuous AC->DC->AC conversion mode. The inverter constantly powers the IT load from the DC bus, isolating servers from utility power spikes, sags, and frequency fluctuations with zero transfer switching time during a power cut."
+  },
+  {
+    "id": "tech_q_dc_11",
+    "topic_id": "tech_12",
+    "question": "What is the recommended maximum ground earth resistance for data centre dedicated IT transformer and server room earth pits as per standard Indian engineering practice?",
+    "options": [
+      "A) Less than 1.0 Ohm",
+      "B) 10 to 15 Ohms",
+      "C) 25 Ohms",
+      "D) 50 Ohms"
+    ],
+    "answer": "A",
+    "explanation": "For sensitive computer and electronic data processing equipment, the dedicated earth electrode resistance must be less than 1.0 Ohm to safely dissipate static charges, transient surges, and fault currents."
+  },
+  {
+    "id": "tech_q_dc_12",
+    "topic_id": "tech_12",
+    "question": "Which early fire detection system draws continuous air samples from server cabinets through a network of sampling pipes and laser detection chambers to detect pre-combustion smoke particles hours before visible flame?",
+    "options": [
+      "A) Thermal heat fuse link",
+      "B) VESDA (Very Early Smoke Detection Apparatus)",
+      "C) Optical glass break manual pull station",
+      "D) Bimetallic strip sensor"
+    ],
+    "answer": "B",
+    "explanation": "VESDA continuously aspirates air through pipe manifolds into a high-sensitivity laser particle detection chamber, detecting sub-micron aerosol particles emitted during cable overheating hours before visible smoke or open flame emerges."
+  },
+  {
+    "id": "tech_q_dc_13",
+    "topic_id": "tech_12",
+    "question": "According to ASHRAE TC 9.9 thermal guidelines for data processing environments (Class A1), what is the recommended server inlet dry-bulb temperature range?",
+    "options": [
+      "A) 10\u00b0C to 15\u00b0C",
+      "B) 18\u00b0C to 27\u00b0C",
+      "C) 30\u00b0C to 38\u00b0C",
+      "D) 0\u00b0C to 5\u00b0C"
+    ],
+    "answer": "B",
+    "explanation": "ASHRAE TC 9.9 recommends a server intake air temperature envelope between 18.0\u00b0C and 27.0\u00b0C (64.4\u00b0F to 80.6\u00b0F) and relative humidity between 40% and 60% with dew point limits to prevent electrostatic discharge or condensation."
+  },
+  {
+    "id": "tech_q_dc_14",
+    "topic_id": "tech_12",
+    "question": "In structured cabling as per ANSI/TIA-942, what is the hierarchical distribution area that houses core switches and interfaces between the data centre entrance facility and computer room horizontal distribution areas?",
+    "options": [
+      "A) Zone Distribution Area (ZDA)",
+      "B) Main Distribution Area (MDA)",
+      "C) Equipment Distribution Area (EDA)",
+      "D) Horizontal Distribution Area (HDA)"
+    ],
+    "answer": "B",
+    "explanation": "The Main Distribution Area (MDA) is the central nerve center of data centre structured cabling. It houses core routers, core LAN/SAN switches, and cross-connects serving HDAs (Horizontal Distribution Areas) and EDAs (Equipment Distribution Areas)."
+  },
+  {
+    "id": "tech_q_dc_15",
+    "topic_id": "tech_12",
+    "question": "What is the function of a 'Mantrap' (Security Airlock) at the entrance of an enterprise data centre server hall?",
+    "options": [
+      "A) Traps air conditioning exhaust air to conserve power",
+      "B) An interlocking physical two-door security vestibule that prevents tailgating/piggybacking by allowing only one door to open at a time after biometric verification",
+      "C) Acts as a cable entry duct from the basement",
+      "D) Traps static electrical charges from equipment racks"
+    ],
+    "answer": "B",
+    "explanation": "A mantrap consists of two electronically interlocked doors. The second door will not unlock until the first door has closed and the visitor has successfully passed secondary biometric/card authentication, strictly preventing unauthorized tailgating."
   }
 ];
